@@ -1,0 +1,48 @@
+@charset "UTF-8";
+/*
+基本色 濃い青:#262262;
+link 青緑:#3399cc;
+
+こちらのページは各ページごとに細かな設定をしたい場合に使用。
+汎用的であればcommonに追記ください。
+*/
+
+
+/*---index.html---*/
+.mainVisualArea{position:relative;}
+.mainVisualArea .mainVisual{width:100%;}
+.mainVisualArea .logoImg{
+	position: absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	margin:auto;
+	width:50%;
+}
+.mainVisualArea .headCnt{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+}
+
+
+/*---article.html---*/
+
+/*記事内*/
+/*article .imgWrap img{border:1px solid #eee;}*/
+article .recordData{
+	display:flex;
+	margin-top:0.8rem;
+	font-size:0.9rem;
+	line-height:1.1rem;
+}
+
+@media screen and (max-width: 840px) {
+
+}
+
+@media screen and (max-width: 500px) {
+
+}

@@ -1,0 +1,330 @@
+@charset "UTF-8";
+/*
+基本色 濃い青:#262262;
+link:#3399cc;
+
+※この順番通りに並んでいます。
+（細かな設定はstyle.cssで指定します。）
+・子ページ用ヘッダー
+・ヘッダー
+・ナビゲーション
+・メニュー
+・メニュートリガー
+・メイン
+・サイドバー
+・フッター
+*/
+
+
+html,body{
+	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+	font-size:18px;
+	letter-spacing: 0.1rem;
+	color:#262262;
+}
+body{background-color: #f9f9f9;}
+
+a{
+	display: inline-block;
+	box-sizing: border-box;
+	vertical-align: middle;
+}
+a,span,:hover{
+	text-indent: 0;
+	transition: 0.3s;
+}
+
+table{
+	width:100%;
+	border:3px solid #262262;
+	background-color:#fff;
+}
+table th,
+table td{
+	padding:5px 1%;
+	border:1px solid #ddd;
+}
+table th,.th{
+	background-color:#e6f1ff;
+	border:1px solid #cfd8e6;
+}
+table.typeH tr:nth-child(2n){background-color:#eee;}/*横型*/
+table.typeV td:nth-child(2n){background-color:#eee;}/*縦型*/
+
+
+/*パーツごとの指定*/
+
+/*子ページ用ヘッダー*/
+.headCntWrap{
+	background-image:url(../images/main-visual.jpg);
+	background-size:cover;
+}
+
+/*ヘッダー*/
+header{background-color: rgba(0,0,0,0.3);}
+header .headInner{
+	padding:20px 0;
+	text-align:center;
+}
+header .menuTrigger{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	width:20%
+}
+header .logoArea{
+	flex:1;
+}
+header .logoArea img{max-width:40%;}
+header .searchArea{width:20%;}
+header .search{
+	padding: 5px 10px;
+	width:100%;
+	border:2px solid #fff;
+	border-radius: 100px;
+	color:#fff;
+	font-size: 0.8rem;
+}
+
+
+
+/*ナビゲーション*/
+nav{
+	text-align:center;
+	color:#fff;
+}
+nav a{
+	padding: 5px 1% 0;
+	margin: 0 1%;
+	border-bottom:2px solid transparent;
+	font-family:Meiryo;
+	font-weight:bold;
+	color:inherit;
+}
+nav a:hover{
+	border-bottom: 2px solid;
+	transition: 0s;
+}
+nav a.current{border-bottom: 2px solid;}
+
+/*メニュー*/
+menu{
+	display:none;
+	padding:50px 0;
+	background-color: rgba(0,0,0,0.6);
+	color:#fff;
+}
+menu a{color:inherit;}
+menu a:hover{color:#3399cc;}
+
+menu .categoryArea{
+	padding:0 5%;
+	width:30%;
+}
+menu .categoryList li{margin-top:1.3rem;}
+menu .categoryList a{
+	font-size:1.3rem;
+	line-height:1.5;
+}
+menu .menu_articleListArea{
+	/*親要素に対して*/
+	flex: 1;
+	/*子要素に対して*/
+	flex-wrap: wrap;
+}
+menu .menu_articleListArea section{
+	padding:0 3%;
+	margin-bottom:20px;
+	width:50%;
+}
+menu .menu_articleList{font-size:0.9rem;}
+menu .menu_articleList li{
+	margin-top:10px;
+	height: 1rem;
+	line-height:1;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow: ellipsis;
+}
+menu .menu_articleList li:first-child{margin-top:0;}
+menu .menu_articleList li a{display:inline;}
+menu .menuTtl{
+	margin-bottom:5px;
+	font-size:1rem;
+}
+/*メニュートリガー*/
+.menu-trigger,
+.menu-trigger span {
+	display: inline-block;
+	transition: all .4s;
+	box-sizing: border-box;
+}
+.menu-trigger {
+	position: relative;
+	width: 2.5rem;
+	height: 2rem;
+}
+.menu-trigger span {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: #fff;
+	border-radius: 2px;
+}
+.menu-trigger span:nth-of-type(1) {top: 0;}
+.menu-trigger span:nth-of-type(2) {top: 48%;}
+.menu-trigger span:nth-of-type(3) {bottom: 0;}
+/*アクティブ*/
+.menu-trigger.active span:nth-of-type(1) {
+	-webkit-transform: translateY(1rem) rotate(-45deg);
+	transform: translateY(1rem) rotate(-45deg);
+}
+.menu-trigger.active span:nth-of-type(2) {opacity: 0;}
+.menu-trigger.active span:nth-of-type(3) {
+	-webkit-transform: translateY(-0.8rem) rotate(45deg);
+	transform: translateY(-0.8rem) rotate(45deg);
+}
+
+
+/*メイン*/
+.container{padding:2rem 2% 0;}
+main{
+	flex:1;
+	margin-bottom:3rem;
+	padding:0 5% 0 0;
+}
+
+
+/*サイドバー*/
+.sidebar{
+	flex:0 0 25%;
+	background-color:#fff;
+}
+.sidebar .bannerArea {
+	padding:20px 5%;
+}
+.sidebar .bannerArea a{
+	margin:10px 0;
+	background-color:#262262;
+}
+.sidebar .bannerArea img{width:100%;}
+.sidebar .bannerArea a:hover img{opacity:0.6;}
+.side_articleList{
+	padding:20px 5%;
+	margin-top:10px;
+	background-color:#fff;
+	color:#262262;
+}
+.side_articleList .ttl_side{
+	font-size: 1rem;
+	margin-bottom: 15px;
+}
+.side_articleList dl{line-height:1.5;}
+.side_articleList dl a{
+	width:100%;
+	color:inherit;
+}
+.side_articleList dl a:hover{color:#3399cc;}
+
+.side_articleList dt{
+	margin-bottom:5px;
+	max-height: 2.2rem;
+	font-family: Meiryo;
+	font-size:0.8rem;
+	font-weight:bold;
+	overflow: hidden;
+}
+.side_articleList dd{
+	padding-bottom:10px;
+	margin-bottom:20px;
+	border-bottom:1px solid #ececec;
+}
+.side_articleList dd:last-child{
+	padding-bottom:0;
+	margin-bottom:0;
+	border:none;
+}
+.side_articleList .categoryTag{font-size:0.6rem;}
+.side_articleList .more{display:none;font-size:0.8rem;}
+
+
+
+/*フッター*/
+footer{
+	padding:0px;
+	margin-top: 30px;
+	text-align:center;
+}
+.footerLinkArea.flex{
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.footerLinkArea li:before{
+	display:inline-block;
+	content:"|";
+}
+.footerLinkArea li:first-child:before{content:none;}
+.footerLinkArea a{
+	padding:10px 20px;
+	font-size:0.7rem;
+	color:#666;
+}
+.footerLinkArea a:hover{color:#3399cc;}
+
+.copyright{
+	padding:10px 0 10px;
+	color:#999;
+	font-size:0.7rem;
+}
+
+.footerLogo {
+margin-top:10px;
+background-color:#11316c;
+}
+
+.topLink{
+	position:fixed;
+	bottom:2rem;
+	right:3%;
+	color:#262262;
+}
+.topLink:hover{color:#3399cc;}
+.topLink span{
+	display: block;
+	font-size: 0.6rem;
+}
+
+
+@media screen and (max-width: 840px) {
+header{background-color:transparent;}
+.mainVisualArea  header .logoArea img{display:none;}/*トップのみ*/
+header .logoArea img{max-width:60%;}
+
+nav{display:none;}
+
+menu .categoryArea{width:100%;}
+menu .menu_articleListArea{display:none;}
+
+.container >.flex{display:block;}
+.container{padding: 30px 4% 0;}
+
+main{padding:0;}
+
+.sidebar{
+	margin-bottom:3rem;
+	width:100%;
+}
+.sidebar .bannerArea{text-align:center;}
+.sidebar .bannerArea a{width:auto;}
+.sidebar .bannerArea img{max-width:100%;}
+}
+
+
+@media screen and (max-width: 500px) {
+html,body{font-size:16px;}
+header .logoArea img{max-width:80%;}
+.footerLinkArea.flex{align-items: center;}
+.footerLinkArea.flex li{width:50%;}
+.footerLinkArea li:before{content:none;}
+}

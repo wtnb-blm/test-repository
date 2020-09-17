@@ -1,0 +1,754 @@
+@charset "UTF-8";
+/*
+汎用的なクラス
+(親要素から影響を受けないクラス※flexはstyle.cssに子要素へ要設定)
+追加OK
+*/
+
+/*---コンテンツを包括するクラス---*/
+.cntWrap {
+    padding: 2rem 0;
+}
+
+/*コンテンツ外側の上下間隔*/
+.cntInner {
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
+.cntMargin {
+    margin: 1rem 0;
+}
+
+/*コンテンツ内側での上下の間隔*/
+.flex {
+    display: flex;
+}
+
+.imgWrap img {
+    max-width: 100%;
+}
+
+
+/*---よく使用するクラス---*/
+.none {
+    display: none;
+}
+
+/*要素のレイアウトごと隠したい時に*/
+.hidden {
+    visibility: hidden;
+}
+
+/*レイアウトはそのままに見えなくしたいだけの時に*/
+
+/*ちょっと間隔を空けたい時に*/
+.mT_1rem {
+    margin-top: 1rem !important;
+}
+
+.mR_1rem {
+    margin-right: 1rem !important;
+}
+
+.mB_1rem {
+    margin-bottom: 1rem !important;
+}
+
+.mL_1rem {
+    margin-left: 1rem !important;
+}
+
+/*インライン要素には利きません*/
+.txtR {
+    text-align: right;
+}
+
+.txtL {
+    text-align: left;
+}
+
+.txtC {
+    text-align: center;
+}
+
+/*文字リンク*/
+.textLink {
+    display: inline;
+    border-bottom: 1px solid transparent;
+    color: #00a1e9;
+}
+
+.textLink:hover {
+    border-bottom: 1px solid #00a1e9;
+}
+
+/*以下各種文字設定*/
+.colorRed {
+    color: #dc143c;
+}
+
+.markerB {
+    background: linear-gradient(transparent 55%, #afeeee 0%);
+}
+
+/*span用*/
+.markerY {
+    background: linear-gradient(transparent 55%, #ffff7a 0%);
+}
+
+/*span用*/
+.markerR {
+    background: linear-gradient(transparent 55%, #f19ca7 0%);
+}
+
+/*span用*/
+.fontS {
+    /*フォントサイズ*/
+    display: inline-block;
+    font-size: 0.8rem;
+}
+
+.fontM {
+    /*フォントサイズ*/
+    display: inline-block;
+    font-size: 1.2rem;
+}
+
+.fontL {
+    /*フォントサイズ*/
+    display: inline-block;
+    font-size: 1.4rem;
+}
+
+.fontB {
+    font-weight: bold;
+}
+
+.indent {
+    text-indent: 1rem;
+}
+
+
+/*li間にmarginが欲しい時*/
+.listMargin li {
+    margin-top: 1rem;
+}
+
+.listMargin li:first-child {
+    margin-top: 0;
+}
+
+/*リストスタイルタイプ*/
+.caution li {
+    padding-left: 1rem;
+    text-indent: -0.4rem;
+}
+
+.caution li:before {
+    /*注意事項などに*/
+    display: inline-block;
+    content: "＊";
+}
+
+.disc,
+.decimal,
+.alpha {
+    padding-left: 1.5rem;
+}
+
+/*ulに付与してください*/
+.disc {
+    list-style-type: disc;
+}
+
+/*黒丸*/
+.decimal {
+    list-style-type: decimal;
+}
+
+/*数字*/
+.alpha {
+    list-style-type: lower-alpha;
+}
+
+/*アルファベット*/
+
+
+/*---見出し---*/
+.ttl,
+.sectionTtl,
+.sectionTtlSub {
+    line-height: 1.4;
+}
+
+.ttl {
+    /*大見出し<h1>*/
+    font-size: 2rem;
+}
+
+.sectionTtl {
+    /*中見出し<h2>section*/
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+.sectionTtl.indent_2 {
+    /*sectionTtlの2文字分のインデント*/
+    padding-left: 3rem;
+    text-indent: -3.4rem;
+}
+
+.sectionTtlSub {
+    /*小見出し<h3>相当*/
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.sectionTtlSub.indent_1 {
+    /*sectionTtlSubの1文字分のインデント*/
+    text-indent: -1.3rem;
+    padding-left: 1.2rem;
+}
+
+.sectionTtlSub.indent_2 {
+    /*sectionTtlSubの2文字分のインデント*/
+    text-indent: -2rem;
+    padding-left: 2rem;
+}
+
+
+/*NEWの表示*/
+.new:before {
+    display: inline-block;
+    content: "NEW";
+    margin-right: 7px;
+    font-weight: bold;
+    color: #f00;
+    letter-spacing: 0;
+}
+
+/*初心者マーク*/
+.article_box {
+    position: relative;
+}
+
+.article_box li {
+    position: absolute;
+}
+
+.article_box .beginner_mark {
+    /*position: absolute;*/
+    content: url(/images/newly_drivers_mark.png);
+    top: 10px;
+    right: 10px;
+}
+
+.article_box .title_bg {
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #000;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 110%;
+    letter-spacing: -0.1em;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    padding: 8px 30px;
+}
+
+.article_box img {
+    width: 100%;
+}
+
+
+/*カテゴリー：マネジメント*/
+.articleList .category_mng {
+    background-color: #033;
+    color: #fff;
+}
+
+.tagArea .category_mng {
+    color: #033;
+    border: 2px solid #033;
+}
+
+/*カテゴリー：コラム*/
+.articleList .category_column {
+    background-color: #8b0000;
+    color: #fff;
+}
+
+.tagArea .category_column {
+    color: #8b0000;
+    border: 2px solid #8b0000;
+}
+
+
+
+/*
+---記事に関連するクラス---
+・moreリンク
+・パンクズ
+・各SNSボタン
+・タグエリア
+・カテゴリタグボタン
+・表示順
+・記事一覧
+・文字エリア
+・画像エリア
+・画像と文字の2カラム
+・イメージリンクエリア
+・nextとprev
+・ページャー
+*/
+
+/*more*/
+.more {
+    display: none;
+    border-bottom: 1px solid #eee;
+    color: #262262;
+}
+
+.more:hover {
+    display: none;
+    border-bottom: 1px solid #262262;
+}
+
+
+/*パンクズ*/
+.breadcrumb {
+    margin-bottom: 3rem;
+    font-size: 0.9rem;
+}
+
+.breadcrumb li {
+    display: inline-block;
+}
+
+.breadcrumb li:before {
+    display: inline-block;
+    content: "›";
+    padding: 0 0.5rem;
+    vertical-align: baseline;
+}
+
+.breadcrumb li:first-child:before {
+    content: none;
+}
+
+.breadcrumb li a {
+    color: #999;
+}
+
+.breadcrumb li a:hover {
+    color: #3399cc;
+}
+
+
+/*各SNSボタン*/
+.snsBtnArea {
+    margin: 1.5rem 0;
+}
+
+.snsBtnArea a {
+    padding: 0 1.5rem;
+    margin-left: 0.5rem;
+    border: 1px solid transparent;
+    font-size: 0.8rem;
+}
+
+.snsBtnArea a:hover {
+    background: none;
+}
+
+.snsBtnArea a:first-child {
+    margin-left: 0;
+}
+
+.fbBtn {
+    background-color: #4267b2;
+    color: #fff;
+}
+
+.fbBtn:hover {
+    border: 1px solid #4267b2;
+    color: #4267b2;
+}
+
+.twiBtn {
+    background-color: #1da1f2;
+    color: #fff;
+}
+
+.twiBtn:hover {
+    border: 1px solid #1da1f2;
+    color: #1da1f2;
+}
+
+
+/*タグエリア*/
+.tagArea {
+    font-size: 0.9rem;
+}
+
+.tagArea dt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0.2rem 1rem;
+    margin-right: 0.5rem;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.tagArea dd {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.tagArea dd a,
+.tagArea dd span
+
+/*テスト用なので本番後削除*/
+    {
+    padding: 0 0.5rem;
+    color: inherit;
+}
+
+.tagArea dd a:hover {
+    color: #3399cc;
+}
+
+
+/*カテゴリタグボタン*/
+.categoryTagBtn {
+    padding: 5px 12px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 1;
+    letter-spacing: 0;
+}
+
+
+/*表示順切替ボタン*/
+.displayOrder {
+    display: none;
+    padding: 0 2rem;
+    text-align: right;
+}
+
+.displayOrder button:hover {
+    color: #3399cc;
+}
+
+/*記事一覧*/
+.articleListArea.relation {
+    margin-top: 3rem;
+}
+
+/*関連記事エリアのclassです。*/
+.articleListArea .linkArea {
+    padding: 0 2rem;
+}
+
+.articleList.flex {
+    flex-wrap: wrap;
+}
+
+.articleList li {
+    padding: 0 1%;
+    margin: 10px 0;
+    width: 33%;
+}
+
+.articleList a {
+    width: 100%;
+    color: inherit;
+}
+
+.articleListTop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-height: 76%;
+    height: 100%;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.articleListTop:hover {
+    background-color: #262262;
+    color: #fff;
+}
+
+.articleListTop img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/*IE用*/
+@media all and (-ms-high-contrast: none) {
+    .articleListTop img {
+        height: 100%;
+    }
+}
+
+.articleListTop:hover img {
+    opacity: 0.6;
+}
+
+.articleListTop p {
+    padding: 0.8rem;
+    width: 100%;
+    overflow: hidden;
+    font-family: Meiryo;
+    font-size: 0.9rem;
+    font-weight: bold;
+    line-height: 1.2;
+    transition: 0s;
+}
+
+.articleListFoot {
+    padding: 0.5rem 0.8rem;
+    background-color: #ececec;
+    font-size: 0.6rem;
+}
+
+.articleListFoot time {
+    display: flex;
+    align-items: center;
+    letter-spacing: 0;
+}
+
+.articleListFoot.flex {
+    justify-content: space-between;
+}
+
+/*文字エリア*/
+.textArea {
+    line-height: 2;
+}
+
+.textArea p {
+    margin-top: 1rem;
+}
+
+.textArea p:first-child {
+    margin-top: 0;
+}
+
+/*画像エリア*/
+.imageArea {
+    padding: 1rem 0;
+}
+
+.imageArea figcaption,
+.caption {
+    margin-top: 0.5rem;
+    line-height: 1.5;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/*画像と文字の2カラム*/
+.imageTextArea {
+    padding: 1rem 0;
+}
+
+.imageTextArea .imgWrap,
+.imageTextArea .txtWrap {
+    width: 50%;
+}
+
+.imageTextArea .txtWrap {
+    padding: 0 1rem;
+}
+
+.imageTextArea .imgWrap img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.imageTextArea p {
+    text-indent: 1rem;
+}
+
+
+/*イメージリンクエリア*/
+.imageLinkArea {
+    padding: 0 2%;
+}
+
+.imageLinkArea .imageLinkList.flex {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.imageLinkArea .imageLinkList li {
+    margin: 10px;
+    width: 30%;
+}
+
+.imageLinkArea .imageLinkList a {
+    width: 100%;
+    background-color: #262262;
+}
+
+.imageLinkArea .imageLinkList img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.imageLinkArea .imageLinkList a:hover img {
+    opacity: 0.6;
+}
+
+
+/*nextとprev*/
+.pageSwitch.flex {
+    justify-content: space-between;
+}
+
+.pageSwitch a {
+    color: inherit;
+}
+
+.pageSwitch a:hover {
+    color: #3399cc;
+}
+
+
+/*ページャー*/
+.pager.flex {
+    display: none;
+    justify-content: center;
+    text-align: center;
+}
+
+.pager {
+    margin-top: 3rem;
+}
+
+.pager li {
+    margin: 5px;
+}
+
+.pager a,
+.pager span {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2;
+    background-color: #ccc;
+    color: #fff;
+}
+
+.pager a:hover {
+    background-color: #3399cc;
+}
+
+.pager .current {
+    background-color: #262262;
+}
+
+
+@media screen and (max-width: 840px) {
+    .articleList.flex {
+        justify-content: space-between;
+    }
+
+    .articleList li {
+        width: 48%;
+    }
+
+    .imageLinkArea .imageLinkList.flex {
+        justify-content: space-between;
+    }
+
+    .imageLinkArea .imageLinkList li {
+        width: 45%;
+    }
+
+    .imageLinkArea .imageLinkList li img {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        padding: 10px 4% 0;
+    }
+
+    .breadcrumb {
+        margin-bottom: 1.5rem;
+    }
+
+    .ttl {
+        font-size: 1.6rem;
+    }
+
+    /*大見出し<h1>*/
+    .sectionTtl {
+        font-size: 1.4rem;
+    }
+
+    /*中見出し<h2>section*/
+    .sectionTtl.indent_2 {
+        /*sectionTtlの2文字分のインデント*/
+        padding-left: 2.6rem;
+        text-indent: -2.8rem;
+    }
+
+    .articleList li {
+        width: 100%;
+    }
+
+    .articleListTop {
+        height: auto;
+    }
+
+    .articleListTop p {
+        padding: 2rem 1rem;
+    }
+
+
+    .imageLinkArea .imageLinkList li {
+        width: 100%;
+    }
+
+    .imageTextArea.flex {
+        flex-direction: column;
+    }
+
+    .imageTextArea .imgWrap,
+    .imageTextArea .txtWrap {
+        width: 100%;
+    }
+
+    .imageTextArea .txtWrap {
+        margin-top: 0.5rem;
+    }
+}
+
+/*印刷の際にサイドバーと下の関連記事を非表示*/
+@media print {
+    .sidebar {
+        display: none;
+    }
+
+    .articleListArea.relation {
+        display: none;
+    }
+
+}

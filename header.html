@@ -1,0 +1,80 @@
+<header>
+    <script>
+        $(function() {
+            $('.menu-trigger').click(function() {
+                $(this).toggleClass('active');
+                $('menu').toggle("slow");
+                $('nav').toggle("slow"); {
+                    /*windowサイズが840以下の時*/
+                    var w = $(window).width();
+                    var x = 840;
+                    if (w <= x) {
+                        $('nav').css({
+                            display: "none"
+                        });
+                    }
+                }
+                return false;
+            });
+        });
+
+    </script>
+    <div class="cntInner headInner flex">
+        <div class="menuTrigger">
+            <a class="menu-trigger" href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+        <div class="logoArea"><img src="/images/logo_arcatia.png"></div>
+        <div class="searchArea">
+            <!--<input class="search" type="search" placeholder="検索する">-->
+        </div>
+    </div>
+    <!--/cntInner-->
+    <nav>
+        <div class="cntInner">
+            <a href="/concept.html">情報資産管理マガジンとは</a>
+            <a href="/archive.html">記事一覧</a>
+            <a href="/d-assoc/" target="_blank">データ保全推進研究会</a>
+            <!--<a href="#">リリース</a>-->
+        </div>
+        <!--/cntInner-->
+    </nav>
+</header>
+<menu>
+    <div class="cntInner flex">
+        <section class="categoryArea">
+            <h1 class="menuTtl"><a href="/index.html">[トップページ]</a></h1>
+            <h1 class="menuTtl">[コンテンツ]</h1>
+            <ul class="categoryList">
+                <li><a href="/concept.html">情報資産管理マガジンとは</a></li>
+                <li><a href="/archive.html">記事一覧</a></li>
+                <li><a href="/d-assoc/" target="_blank">データ保全推進研究会</a></li>
+                <!--<li><a href="#">リリース</a></li>-->
+            </ul>
+        </section>
+        <div class="menu_articleListArea flex">
+            <!--                        <section>
+                                <h1 class="menuTtl">[人気記事]</h1>
+                                <ul class="menu_articleList">
+                                        <li><a href="/article/001.html">検査データ改ざんの原因と抜本的な防止対策について</a></li>
+                                        <li><a href="/article/002.html">クラウドは万全ではない―バックアップの必要性について</a></li>
+                                        <li><a href="/article/003.html">長期化する情報資産の保存期間。いま求められるデータの「保全」（前編）</a></li>
+                                </ul>
+                        </section>
+-->
+            <section>
+                <h1 class="menuTtl">[おすすめ記事]</h1>
+                <ul class="menu_articleList">
+                    <li><a href="/article/001.html">検査データ改ざんの原因と抜本的な防止対策について</a></li>
+                    <li><a href="/article/002.html">クラウドは万全ではない―バックアップの必要性について</a></li>
+                    <li><a href="/article/003.html">長期化する情報資産の保存期間。いま求められるデータの「保全」（前編）</a></li>
+                </ul>
+            </section>
+        </div>
+        <!--/articleList-->
+    </div>
+    <!--/cntInner-->
+</menu>
